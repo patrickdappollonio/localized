@@ -1,4 +1,5 @@
 // +build linux darwin freebsd netbsd openbsd
+
 package localized
 
 import "regexp"
@@ -16,12 +17,6 @@ var (
 
 	// Remove all the suffix containing the encoding
 	reEncoding = regexp.MustCompile(`\..*$`)
-
-	// Find a two-letter language code
-	reLowerLang = regexp.MustCompile(`[a-z]{2}`)
-
-	// Find the two or three letter-number region
-	reUpperRegion = regexp.MustCompile(`[A-Z0-9]{2,3}`)
 )
 
 func (d *Detector) Detect() error {
@@ -38,9 +33,9 @@ func (d *Detector) Detect() error {
 		if d.defaultSet {
 			d.Detected = false
 			return nil
-		} else {
-			return ErrNoLangDetected
 		}
+
+		return ErrNoLangDetected
 	}
 
 	// If the language was actually found, parse it. This will be

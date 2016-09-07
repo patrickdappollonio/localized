@@ -27,6 +27,8 @@ var (
 	ErrNoLangDetected = fmt.Errorf("localized: no language detected") // Returned when no language was detected and there are no defaults
 
 	reLangWithRegion = regexp.MustCompile(`[A-Za-z]{2}\_[A-Za-z0-9]{2,3}`)
+	reLowerLang      = regexp.MustCompile(`[a-z]{2}`)      // Find a two-letter language code
+	reUpperRegion    = regexp.MustCompile(`[A-Z0-9]{2,3}`) // Find the two or three letter-number region
 )
 
 // New takes an optional configuration with a default language and a default region

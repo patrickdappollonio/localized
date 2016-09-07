@@ -1,4 +1,5 @@
 // +build linux darwin freebsd netbsd openbsd
+
 package localized
 
 import (
@@ -6,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestParsingRegex(t *testing.T) {
+func TestLanguageDetection(t *testing.T) {
 	var langs = []struct {
 		Code, ELang, ERegion string
 		DLang, DRegion       string
