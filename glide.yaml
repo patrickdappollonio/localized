@@ -1,0 +1,5 @@
+package: github.hpe.com/Synergy/localized.git
+import:
+- package: golang.org/x/sys
+  subpackages:
+  - windows
