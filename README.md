@@ -1,5 +1,7 @@
 # localized
 
+[![GoDoc](https://godoc.org/github.com/patrickdappollonio/localized?status.svg)](https://godoc.org/github.com/patrickdappollonio/localized)
+
 `localized` is a simple package to detect the user language based on the environment. On Windows, it works by performing a Win API call. On *NIX, it works by simply retrieving `LC_ALL` environment variable first, then `LANG` if the first one didn't contain any information.
 
 ### Usage
