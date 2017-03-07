@@ -1,11 +1,11 @@
 language: go
 
 go:
-	- tip
+  - tip
 
 script:
-	- go test
-	- go build
+  - go test
+  - go build
 
 notifications:
-	email: false
+  email: false
