@@ -1,0 +1,8 @@
+nguage: go
+
+go:
+  - tip
+
+script:
+  - go test
+  - go build
